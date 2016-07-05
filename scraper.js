@@ -12,8 +12,9 @@ request('http://substack.net/images/', function (error, response, body) {
       var filePath = $(this).children().last().text();
       var fileExt = path.extname(filePath);
       var strToInsert = `${permissions},${filePath},${fileExt},`
-      console.log(strToInsert);
+      fs.appendFile('./file.csv', strToInsert, (err) => {
+        if (err) throw err;
+      });
     });
-    
   }
 })
