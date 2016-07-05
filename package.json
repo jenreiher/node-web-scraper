@@ -15,5 +15,9 @@
   "bugs": {
     "url": "https://github.com/jenreiher/node-web-scraper/issues"
   },
-  "homepage": "https://github.com/jenreiher/node-web-scraper#readme"
+  "homepage": "https://github.com/jenreiher/node-web-scraper#readme",
+  "dependencies": {
+    "cheerio": "^0.20.0",
+    "request": "^2.72.0"
+  }
 }
