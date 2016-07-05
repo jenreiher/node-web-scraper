@@ -11,7 +11,8 @@ request('http://substack.net/images/', function (error, response, body) {
       var permissions = $(this).children().first().text();
       var filePath = $(this).children().last().text();
       var fileExt = path.extname(filePath);
-      console.log(fileExt);
+      var strToInsert = `${permissions},${filePath},${fileExt},`
+      console.log(strToInsert);
     });
     
   }
