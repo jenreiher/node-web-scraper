@@ -8,10 +8,10 @@ request('http://substack.net/images/', function (error, response, body) {
     var contents = []
     var $ = cheerio.load(body);
     $('tr').each(function(i, elem) {
-      var firstTD = $(this).children().first().text();
-      var lastTD = $(this).children().last().text();
-      console.log(lastTD);
-      // console.log(contents);
+      var permissions = $(this).children().first().text();
+      var filePath = $(this).children().last().text();
+      var fileExt = path.extname(filePath);
+      console.log(fileExt);
     });
     
   }
